@@ -1,5 +1,5 @@
 """
-Models for core app 
+Models for core app
 """
 from django.db import models
 from django.contrib.auth.models import (
@@ -17,7 +17,6 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
-
         return user
 
 
